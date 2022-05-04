@@ -1,31 +1,37 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link> |
-    <router-link to="/galeria">Galería</router-link> | 
-    <router-link to="/contact">Contacto</router-link>
+  <!-- Menú principal -->
+  <the-menu></the-menu>
+  <!-- Cotenido principal de la página -->
+  <div class="main-content">
+    <router-view />
   </div>
-  <router-view/>
+  <!-- Pie de página principal -->
+  <TheFooter></TheFooter>
 </template>
 
+<script setup>
+//Dependecias
+import TheMenu from "@/components/TheMenu";
+import TheFooter from "@/components/TheFooter";
+</script>
+
+
+
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
+body {
+  margin: 0;
+  padding: 0;
 }
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+#app {
+  //Grid
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  //Box
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  //font
+  font-family: Avenir, Helvetica, Arial, sans-serif;
 }
 </style>
