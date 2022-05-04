@@ -13,25 +13,7 @@
 //Dependecias
 import TheMenu from "@/components/TheMenu";
 import TheFooter from "@/components/TheFooter";
+//Importanción de ficheros scss con nodejs
+require("@/assets/scss/_reset.scss");
+require("@/assets/scss/estructura.scss");
 </script>
-
-
-
-<style lang="scss">
-body {
-  margin: 0;
-  padding: 0;
-}
-
-#app {
-  //Grid
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  //Box
-  min-height: 100vh;
-  margin: 0;
-  padding: 0;
-  //font
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-}
-</style>
