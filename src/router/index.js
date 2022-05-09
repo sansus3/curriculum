@@ -22,6 +22,11 @@ const routes = [
     name: 'Galeria',
     component: () => import('../views/GaleriaView.vue')
   },
+  {
+    path: '/especies',
+    name: 'Especies',
+    component: () => import('../views/EspeciesView.vue')
+  },
 ]
 
 const router = createRouter({

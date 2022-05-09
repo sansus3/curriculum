@@ -1,0 +1,32 @@
+@import '_variables.scss';
+.main-menu{
+    background-color: $bg-color-1;
+    .router-link-exact-active{
+        background-color: $bg-color-active-1;
+        text-shadow: 0 1px 0 $color-1;
+    }
+    a{
+        display: block;
+        padding: .5em;
+        text-decoration: none;
+        color: white;
+        &:hover:not(.router-link-exact-active){
+            background-color: $bg-color-hover-1;
+            border-color: $bg-color-hover-1;
+        }
+    }
+
+    @media (min-width: 600px) {
+        &{
+            display: flex;
+            
+            a{
+                flex-grow: 1;
+                flex-shrink: 0;
+                flex-basis: auto;
+                
+                text-align: center;
+            }
+        }
+    }
+}
