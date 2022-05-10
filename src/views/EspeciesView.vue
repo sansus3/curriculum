@@ -4,38 +4,46 @@
 
         <select name="colores" id="colores">
             <option 
-                v-for="item in colores" 
-                :key="item" 
-                :value="item"
+            v-for="(valor,indice) in data.colores"
+            :key="indice"
+            :value="valor"
             >
-            {{item}}</option>
+            {{valor}}
+            </option>
         </select>
         
-        <ol v-if="colores.length>0">
-            <li v-for="valor in colores" :key="valor">{{valor}}</li>
-        </ol>
+        
     </div>
 </template>
 
 <script setup>
-    const titulo = "Listado de especies";
-    const colores = [
-        "Morado",
-        "Azul",
-        "Verde",
-        "Rosa"
+    //Carga de librería o dependencias
+    import {ref} from "vue";
+
+    const titulo = "Especies";
+    let data = ref('hola');
+    //import datos from "../assets/colores.json";
+    //console.log(datos);
     
-    ];
-    
-    
-    // Declaración o plantilla de la función
-    const leerDatos = async () => {
-        const response = await fetch('https://altas-senlleiras-default-rtdb.europe-west1.firebasedatabase.app/species.json');
-        //console.log(response);
-        const data = await response.json();
-        console.log(data);
+    //Utilizar promesa para obtención de datos
+    /**
+     * Función para obtener datos en github
+     * async --> parámetro obligatorio para funciones asíncronas
+     * async va SIEMPRE ACOMPAÑADO DE await
+     */
+    const obtenerDatos = async () => {
+        /**
+         * fetch devuelve una promesa que es una respuesta
+         */
+        let response = await fetch('https://raw.githubusercontent.com/sansus3/lectura-json/main/colores.json');
+        //Conversión del tipo de datos
+        data.value = await response.json();
+        //console.log(data.value)
     }
-    //Uso de la función
-    leerDatos();
+
+    //llamar a la función
+    obtenerDatos();
+    
+        
 
 </script>
