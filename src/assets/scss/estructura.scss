@@ -1,3 +1,5 @@
+@import "normalize-scss";
+@include normalize();
 #app {
     //Grid
     display: grid;

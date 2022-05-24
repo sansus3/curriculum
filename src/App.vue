@@ -14,6 +14,5 @@
 import TheMenu from "@/components/TheMenu";
 import TheFooter from "@/components/TheFooter";
 //Importanción de ficheros scss con nodejs
-require("@/assets/scss/_reset.scss");
 require("@/assets/scss/estructura.scss");
 </script>

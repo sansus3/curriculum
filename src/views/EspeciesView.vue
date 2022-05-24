@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="container" v-if="loading">
         <h1 class="title">{{titulo}}</h1>
 
         <select name="colores" id="colores">
@@ -12,6 +12,10 @@
             </option>
         </select>
         
+       {{data.nombre.firsName}}
+         
+       
+        
         
     </div>
 </template>
@@ -20,8 +24,11 @@
     //Carga de librería o dependencias
     import {ref} from "vue";
 
+    
+
     const titulo = "Especies";
     let data = ref('hola');
+    const loading = ref(false);
     //import datos from "../assets/colores.json";
     //console.log(datos);
     
@@ -38,6 +45,7 @@
         let response = await fetch('https://raw.githubusercontent.com/sansus3/lectura-json/main/colores.json');
         //Conversión del tipo de datos
         data.value = await response.json();
+        loading.value = true;
         //console.log(data.value)
     }
 

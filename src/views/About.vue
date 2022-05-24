@@ -1,18 +1,22 @@
 <template>
   <div class="about">
-    <h1>{{title}}</h1>
+    <h1>Curriculum Vitae de {{store.nombre}} {{store.apellido1}}</h1>
+    <ul>
+      <li v-for="valor in store.curriculum" :key="valor.cod">
+        <ol>
+          <li><strong>denominacion</strong>: {{valor.denominacion}}</li>
+          <li><strong>Fecha</strong>: {{valor.fechaIncio}}</li>
+        </ol>
+      </li>
+    </ul>
+    <!-- <pre>
+       {{store.curriculum}}
+    </pre> -->
   </div>
 </template>
 
 <script setup>
-//Importanción de dependencias
-import {useStore} from 'vuex';
-import {computed} from 'vue';
-
-//Cargo el store / datos centralizados
-const store = useStore();
-
-const title = computed(()=>store.state.tituloPrincipal);
-
-
+import {useStoreProfile} from "@/store/profile";
+const store = useStoreProfile();
+store.cargarData();
 </script>

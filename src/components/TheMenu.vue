@@ -1,10 +1,11 @@
 <template>
     <nav class="main-menu">
-        <router-link to="/">Home</router-link>
-        <router-link to="/about">About</router-link>
-        <router-link to="/galeria">Galería</router-link>
-        <router-link to="/contact">Contacto</router-link>
-        <router-link to="/especies">Especies</router-link>
+        <router-link to="/">
+            <font-awesome-icon :icon="['fa','home']">Home</font-awesome-icon>
+        </router-link>
+        <router-link to="/about">
+           <font-awesome-icon :icon="['fa','info-circle']" spin />
+        </router-link>
     </nav>
 </template>
 
