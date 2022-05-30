@@ -4,7 +4,7 @@
             <font-awesome-icon :icon="['fa','home']">Home</font-awesome-icon>
         </router-link>
         <router-link to="/about">
-           <font-awesome-icon :icon="['fa','info-circle']" spin />
+           <font-awesome-icon :icon="['fa','info-circle']" />
         </router-link>
     </nav>
 </template>

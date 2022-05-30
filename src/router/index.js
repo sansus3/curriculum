@@ -18,15 +18,15 @@ const routes = [
     component: () => import('../views/Contact.vue')
   },
   {
-    path: '/galeria',
-    name: 'Galeria',
-    component: () => import('../views/GaleriaView.vue')
+    path: '/curriculum',
+    name: 'Curriculum',
+    component: () => import('../views/profile/CurriculumView.vue')
   },
-  {
-    path: '/especies',
-    name: 'Especies',
-    component: () => import('../views/EspeciesView.vue')
-  },
+  // {
+  //   path: '/experiencia-laboral',
+  //   name: 'WorkExperience',
+  //   component: () => import('../views/profile/WorkExperienceView.vue')
+  // },
 ]
 
 const router = createRouter({
