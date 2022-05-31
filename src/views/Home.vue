@@ -5,7 +5,7 @@
     </h1>
     <ul>
       <li>
-        <router-link to="/curriculum">Curriculum</router-link>
+        <router-link to="/about">Sobre mí</router-link>
       </li>
     </ul>  
   </div>

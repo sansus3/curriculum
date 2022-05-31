@@ -17,11 +17,6 @@ const routes = [
     name: 'Contacto',
     component: () => import('../views/Contact.vue')
   },
-  {
-    path: '/curriculum',
-    name: 'Curriculum',
-    component: () => import('../views/profile/CurriculumView.vue')
-  },
 ]
 
 const router = createRouter({
