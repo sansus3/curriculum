@@ -22,11 +22,6 @@ const routes = [
     name: 'Curriculum',
     component: () => import('../views/profile/CurriculumView.vue')
   },
-  // {
-  //   path: '/experiencia-laboral',
-  //   name: 'WorkExperience',
-  //   component: () => import('../views/profile/WorkExperienceView.vue')
-  // },
 ]
 
 const router = createRouter({
